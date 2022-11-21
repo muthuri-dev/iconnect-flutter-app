@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iconnect_flutter_app/components/page2.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -9,10 +8,18 @@ void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const Home(
-        value: '',
-      ),
       debugShowCheckedModeBanner: false,
-    ),
+      home:const Home() ,
+      ),
+    
   );
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
 }
