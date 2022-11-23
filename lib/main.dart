@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iconnect_flutter_app/views/Home.dart';
+import 'package:iconnect_flutter_app/views/View.dart';
 import 'package:material_color_gen/material_color_gen.dart';
 
 void main() {
@@ -10,7 +10,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Color.fromARGB(255, 2, 37, 3).toMaterialColor(),
+        primarySwatch: Color.fromARGB(255, 6, 124, 10).toMaterialColor(),
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.deepPurple,
         ),

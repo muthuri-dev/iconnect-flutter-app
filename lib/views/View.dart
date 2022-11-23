@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:iconnect_flutter_app/components/Drawer.dart';
+import 'package:iconnect_flutter_app/views/Pages/Home.dart';
+import 'package:iconnect_flutter_app/views/Pages/Peers.dart';
+import 'package:iconnect_flutter_app/views/Pages/Projects.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -18,6 +22,12 @@ class _HomeState extends State<Home> {
             'Welcome',
             style: TextStyle(fontFamily: 'monospace'),
           ),
+          centerTitle: true,
+          toolbarHeight: MediaQuery.of(context).size.height * .12,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(100))),
           bottom: TabBar(
             isScrollable: true,
             labelPadding: EdgeInsets.symmetric(horizontal: 45),
@@ -36,22 +46,22 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                'Name',
+                style: TextStyle(fontFamily: 'monospace'),
+              ),
+            )
+          ],
         ),
+        drawer: MyDrawer(),
         body: TabBarView(
           children: [
-            Center(
-              child: Column(
-                children: [
-                  ElevatedButton(onPressed: null, child: Text('click'))
-                ],
-              ),
-            ),
-            Center(
-              child: Icon(Icons.person),
-            ),
-            Center(
-              child: Icon(Icons.computer),
-            ),
+            HomePage(),
+            PeersPage(),
+            ProjectsPage(),
           ],
         ),
       ),
