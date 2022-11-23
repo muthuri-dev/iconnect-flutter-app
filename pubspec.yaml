@@ -39,10 +39,10 @@ dependencies:
   flutter_native_splash: ^2.2.15
   http: ^0.13.5
   url_launcher: ^6.1.7
-  flutter_svg: ^1.1.6
   wave: ^0.2.2
   material_color_gen: ^2.0.0
   carousel_slider: ^4.1.1
+  flutter_svg_provider: ^1.0.3
 
 dev_dependencies:
   flutter_test:

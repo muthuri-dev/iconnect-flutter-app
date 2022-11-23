@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iconnect_flutter_app/views/View.dart';
+import 'package:iconnect_flutter_app/views/FirstPages/intro.dart';
+//import 'package:iconnect_flutter_app/views/View.dart';
 import 'package:material_color_gen/material_color_gen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ void main() {
           buttonColor: Colors.deepPurple,
         ),
       ),
-      home: const Home(),
+      home: const IntroScreen(),
     ),
   );
 }
