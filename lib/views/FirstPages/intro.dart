@@ -15,7 +15,7 @@ class IntroScreen extends StatelessWidget {
           CarouselSlider(
             items: [
               Card(
-                elevation: 5,
+                elevation: 0,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * .8,
                   child: Column(
@@ -27,18 +27,20 @@ class IntroScreen extends StatelessWidget {
                         height: MediaQuery.of(context).size.height * .5,
                         width: MediaQuery.of(context).size.width * .7,
                       ),
-                      Text(
-                        'Connecting with',
-                        style: TextStyle(
-                            fontFamily: 'monospace',
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30.0,
-                            color: Colors.green),
+                      ListTile(
+                        title: Text(
+                          'IKonnect',
+                          style: TextStyle(
+                              fontFamily: 'monospace',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25.0,
+                              color: Colors.green),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Text(
-                          ' Everyone and everywhere',
+                          ' Platform for connecting developers through sharing their experiences and their thoughts.',
                           style: TextStyle(
                             fontFamily: 'monospace',
                             fontWeight: FontWeight.normal,
@@ -50,7 +52,7 @@ class IntroScreen extends StatelessWidget {
                 ),
               ),
               Card(
-                elevation: 5,
+                elevation: 0,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * .8,
                   child: Column(
@@ -73,29 +75,29 @@ class IntroScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'relationship with community and',
+                          'Have relationship with community peers and know your impact.',
                           style: TextStyle(
                             fontFamily: 'monospace',
                             fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          ' know your impact',
-                          style: TextStyle(
-                            fontFamily: 'monospace',
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.all(8.0),
+                      //   child: Text(
+                      //     ' know your impact',
+                      //     style: TextStyle(
+                      //       fontFamily: 'monospace',
+                      //       fontWeight: FontWeight.normal,
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
               ),
               Card(
-                elevation: 5,
+                elevation: 0,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * .8,
                   child: Column(
@@ -118,41 +120,29 @@ class IntroScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'is the best form of being greateful',
+                          'Posting your projects to the platform is the best form of being greateful for what you hve developed.',
                           style: TextStyle(
                             fontFamily: 'monospace',
                             fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'for what we have got.',
-                          style: TextStyle(
-                            fontFamily: 'monospace',
-                            fontWeight: FontWeight.normal,
-                          ),
+                      ElevatedButton.icon(
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll(Colors.green),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: ElevatedButton.icon(
-                          style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStatePropertyAll(Colors.green)),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPage()));
-                          },
-                          icon: Icon(Icons.start_outlined),
-                          label: Text(
-                            'Get Started',
-                            style: TextStyle(
-                                fontFamily: 'monospace', color: Colors.white),
-                          ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
+                        },
+                        icon: Icon(Icons.start_outlined),
+                        label: Text(
+                          'Get Started',
+                          style: TextStyle(
+                              fontFamily: 'monospace', color: Colors.white),
                         ),
                       )
                     ],
@@ -168,7 +158,7 @@ class IntroScreen extends StatelessWidget {
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: false,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
-              viewportFraction: 0.8,
+              viewportFraction: 0.7,
             ),
           ),
         ],
